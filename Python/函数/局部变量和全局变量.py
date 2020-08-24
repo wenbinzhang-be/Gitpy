@@ -4,16 +4,22 @@
 # ——————————————————全局变量————————————————————
 # pro的定义就是一个全局变量，作用域不同
 # 当全局变量和局部变量出现重复定义的时候，程序会优先执行使用函数内部的变量
-pro='计算机信息管理'
-name='马冬梅'
+pro = '计算机信息管理'
+name = '马冬梅'
+
+
 def printinfo():
-    name='Peter'
-    print('{}''{}'.format(name,pro))
+    name = 'Peter'
+    print('{}''{}'.format(name, pro))
     pass
+
+
 def testmethod():
-    name='张文斌'
-    print(name,pro)
+    name = '张文斌'
+    print(name, pro)
     pass
+
+
 def changeGlobal():
     '''
     要修改全局变量
@@ -23,6 +29,7 @@ def changeGlobal():
     pro='市场营销'
     print(pro)
     pass
+
 
 changeGlobal()
 testmethod()

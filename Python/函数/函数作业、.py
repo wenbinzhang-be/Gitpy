@@ -1,20 +1,26 @@
 # 1.写函数，接受n个数字，求这些参数数字的和
-#%d整形 格式化输出
+# %d整形 格式化输出
 def sumall(*args):
-    result=0
+    result = 0
     for item in args:
-        result +=item
+        result += item
         pass
-    print('您输入的和=%d'%result)
-sumall(1,2,3,4,5,6,6)
+    print('您输入的和=%d' % result)
+
+
+sumall(1, 2, 3, 4, 5, 6, 6)
+
+
 # %f浮点型 格式化输出
 def sumall(*args):
-    result=0
+    result = 0
     for item in args:
-        result +=item
+        result += item
         pass
-    print('您输入的和=%s'%result)
-sumall(1,2,3,4,5,6,6.1)
+    print('您输入的和=%s' % result)
+
+
+sumall(1, 2, 3, 4, 5, 6, 6.1)
 
 # 2.写函数，找出传入列表或元组的奇数位所对应的元素，并返回一个新的列表
 list1=(1,2,3,4,5,6,7,8)
