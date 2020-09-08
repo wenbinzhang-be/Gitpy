@@ -12,8 +12,8 @@ import os
 创建文件夹
 '''
 #  3.os.mkdir/rmdir(文件夹名字或者带路径的文件夹名字)
-# os.mkdir('py') #  creat a folder
-# os.rmdir('py') #  delet a folder
+# os.mkdir('py')  #  creat a folder
+# os.rmdir('py')  #  delet a folder
 # 5.os.getcwd()获取当前文件夹返回当前文件所在目录路径
 # os.getcwd()
 # 6.chdir():改变目录

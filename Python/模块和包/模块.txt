@@ -1,0 +1,49 @@
+一、模块是什么？
+python 模块（module），就是一个python文件，以.py结尾，包含了python对象定义和python语句。
+模块能定义函数，类和变量，模块里也能包含可执行的代码。
+1.1导入模块
+    1.1.1导入模块的方式
+    import 模块名
+    from 模块名 import 功能名
+    from 模块名 import *
+    import 模块名 as 别名
+    from 模块名 import 功能名 as 别名
+    1.1.2.1 import
+    语法
+    # 1。 导入模块
+    import 模块名
+    # 2 调用功能
+    模块名.功能名
+1.2 制作模块
+在python中，每个python文件都可以作为一个模块，模块的名字就是文件的名字，
+也就是说自定义模块名必须符合标识符命名规则。
+    1.2.1定义模块
+        新建一个python文件，命名为my_module.py，并定义testA函数。
+        def testA（a,b）:
+            print(a+b)
+    1.2.2测试模块
+        在实际开发中，当一个开发人员编写完一个模块后，为了让模块能够在项目中达到想要的效果
+        这个开发人员会自行在py文件中添加一些测试信息，例如，在
+        my_module.py文件中添加测试代码。
+    1.2.3调用模块
+1.3 模块定位顺序 （由近及远）
+     当导入一个模块，python解释器对模块位置的搜索顺序:
+     1.当前目录
+     2. 如果不在当前目录，python则会搜索在shell变量PYTHONPATH下的每个目录
+     3. 如果都找到不到，python会查看默认路径，UNIX下，默认路径一般为/usr/local/lib/python/
+      模块搜索路存储在system 模块中的sys.path变量中。变量里包含当前目录，PYTHOPATH和由安装过程决定的默认目录
+            注意：
+            自己的文件名不要和已有模块名重复，否则导致模块功能无法使用
+            使用from模块名和import功能时，如果功能名字重复，调用到的是最后定义或导入的功能
+__all__列表
+如果一个模块文件中有__all__变量，当使用from xxx import *导入时，只能导入这个列表中的元素
+my_module模块代码
+__all__ = ['testA']
+
+
+def testA():
+    print('testA')
+def testB():
+    print('testB')
+
+ 引用
